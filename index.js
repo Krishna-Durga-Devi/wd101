@@ -82,4 +82,4 @@ const form = (event) => {
 };
 
 a.addEventListener("submit", form);
-displayEntry();
+displayEntry()
