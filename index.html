@@ -1,0 +1,46 @@
+<!--Designing a form-->
+<html>
+  <head>
+    <title>Form</title>
+
+  </head>
+  <body>
+    <form id="user-storage">
+      <div align="center">
+        <h1>Registration Form</h1>
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required/>
+          </div>
+          <br>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required/>
+          </div>
+          <br>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required/>
+          </div>
+          <br>
+          <div>
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required/>
+          </div>
+          <br>
+          <div>
+            <input type="checkbox" id="acceptTerms" name="acceptTerms" required/>
+            <label for="acceptTerms">Accept Terms & Conditions</label>
+          </div>
+          <br>
+          <button type="submit">Submit</button>
+      </div>
+    </form>
+    <div >
+        <h2 align="center">User Entries</h2>
+        <div id="user-entries"></div>
+
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>
