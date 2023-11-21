@@ -33,6 +33,13 @@ const displayEntry = () => {
 
   const table = (
     `<table align="center" style="border-collapse: collapse; border:1px solid black">
+     <tr>
+        <th style="border:1px solid black">Name</th>
+        <th style="border:1px solid black">Email</th>
+        <th style="border:1px solid black">Password</th>
+        <th style="border:1px solid black">Dob</th>
+        <th style="border:1px solid black">AcceptTerms</th>
+      </tr>
       <tr>
         <th style="border:1px solid black">Name</th>
         <th style="border:1px solid black">Email</th>
@@ -54,6 +61,13 @@ const form = (event) => {
   const d = document.getElementById("password").value;
   const e = document.getElementById("dob").value;
   const f = document.getElementById("acceptTerms").checked;
+  const currentDate = new Date();
+  const birthDate = new Date(e);
+  const age = currentDate.getFullYear() - birthDate.getFullYear();
+
+  if (age < 18 || age > 55) {
+    alert("You must be between 18 and 55 years old to register.");
+    return; // Stop processing the form
 
   const entry = {
     b,
