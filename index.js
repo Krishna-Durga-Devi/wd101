@@ -40,13 +40,6 @@ const displayEntry = () => {
         <th style="border:1px solid black">Dob</th>
         <th style="border:1px solid black">AcceptTerms</th>
       </tr>
-      <tr>
-        <th style="border:1px solid black">Name</th>
-        <th style="border:1px solid black">Email</th>
-        <th style="border:1px solid black">Password</th>
-        <th style="border:1px solid black">Dob</th>
-        <th style="border:1px solid black">AcceptTerms</th>
-      </tr>
       ${tabEnt}
     </table>`
   );
@@ -67,8 +60,8 @@ const form = (event) => {
 
   if (age < 18 || age > 55) {
     alert("You must be between 18 and 55 years old to register.");
-    return; // Stop processing the form
-
+    return; 
+  }
   const entry = {
     b,
     c,
@@ -82,4 +75,4 @@ const form = (event) => {
 };
 
 a.addEventListener("submit", form);
-displayEntry()
+displayEntry();
